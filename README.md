@@ -109,3 +109,45 @@ import {
 
 ## Notes
 Kubernetes >=1.17.0
+
+<!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
+## Requirements
+
+| Name | Version |
+|------|---------|
+| <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 0.14 |
+| <a name="requirement_http"></a> [http](#requirement\_http) | >= 3.3 |
+| <a name="requirement_kubernetes"></a> [kubernetes](#requirement\_kubernetes) | >= 2.6.0 |
+
+## Providers
+
+| Name | Version |
+|------|---------|
+| <a name="provider_http"></a> [http](#provider\_http) | >= 3.3 |
+| <a name="provider_kubernetes"></a> [kubernetes](#provider\_kubernetes) | >= 2.6.0 |
+
+## Modules
+
+No modules.
+
+## Resources
+
+| Name | Type |
+|------|------|
+| [kubernetes_manifest.crd](https://registry.terraform.io/providers/hashicorp/kubernetes/latest/docs/resources/manifest) | resource |
+| [http_http.crd_manifest](https://registry.terraform.io/providers/hashicorp/http/latest/docs/data-sources/http) | data source |
+
+## Inputs
+
+| Name | Description | Type | Default | Required |
+|------|-------------|------|---------|:--------:|
+| <a name="input_crd_dl_url"></a> [crd\_dl\_url](#input\_crd\_dl\_url) | Template string of the URL to download CRDs | `string` | `"https://raw.githubusercontent.com/prometheus-operator/prometheus-operator/v%s/example/prometheus-operator-crd%s/monitoring.coreos.com_%s.yaml"` | no |
+| <a name="input_crds_list"></a> [crds\_list](#input\_crds\_list) | List of CRDs to deploy. If not set, all CRDs will be deployed. | `set(string)` | `[]` | no |
+| <a name="input_crds_version"></a> [crds\_version](#input\_crds\_version) | Version of the Prometheus Operator release, e.g. 0.71.2 | `string` | n/a | yes |
+| <a name="input_force_override_conflicts"></a> [force\_override\_conflicts](#input\_force\_override\_conflicts) | Force override fields manager conflicts. May be useful when importing existing CRDs. | `bool` | `false` | no |
+| <a name="input_full_crds"></a> [full\_crds](#input\_full\_crds) | Whether to deploy full versions of CRDs. Has effect starting from version >=0.57.0. | `bool` | `false` | no |
+
+## Outputs
+
+No outputs.
+<!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
