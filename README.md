@@ -48,7 +48,7 @@ module "prometheus_operator_crds" {
 ```
 ## Importing existing CRDs
 It is possible to bring existing Prometheus Operator CRDs under Terraform management to avoid resource recreation. Before proceeding with the import, make sure you are using matching versions of CRDs. Starting with Terraform v1.5.0 and later it is possible to do this in a declarative way. Below is the code example.  
-Setting the `force_override_confilicts` variable to `true` will allow overriding conflicts if CRDs were deployed outside of Terraform in the first place.  
+Setting the `force_override_conflicts` variable to `true` will allow overriding conflicts if CRDs were deployed outside of Terraform in the first place.  
 
 ```hcl
 # Version >= v0.39.0
