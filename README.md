@@ -53,56 +53,56 @@ Setting the `force_override_conflicts` variable to `true` will allow overriding 
 ```hcl
 # Version >= v0.39.0
 import {
-  to = module.crds.kubernetes_manifest.crd["alertmanagers"]
+  to = module.prometheus_operator_crds.kubernetes_manifest.crd["alertmanagers"]
   id = "apiVersion=apiextensions.k8s.io/v1,kind=CustomResourceDefinition,name=alertmanagers.monitoring.coreos.com"
 }
 
 import {
-  to = module.crds.kubernetes_manifest.crd["podmonitors"]
+  to = module.prometheus_operator_crds.kubernetes_manifest.crd["podmonitors"]
   id = "apiVersion=apiextensions.k8s.io/v1,kind=CustomResourceDefinition,name=podmonitors.monitoring.coreos.com"
 }
 
 import {
-  to = module.crds.kubernetes_manifest.crd["prometheuses"]
+  to = module.prometheus_operator_crds.kubernetes_manifest.crd["prometheuses"]
   id = "apiVersion=apiextensions.k8s.io/v1,kind=CustomResourceDefinition,name=prometheuses.monitoring.coreos.com"
 }
 
 import {
-  to = module.crds.kubernetes_manifest.crd["prometheusrules"]
+  to = module.prometheus_operator_crds.kubernetes_manifest.crd["prometheusrules"]
   id = "apiVersion=apiextensions.k8s.io/v1,kind=CustomResourceDefinition,name=prometheusrules.monitoring.coreos.com"
 }
 
 import {
-  to = module.crds.kubernetes_manifest.crd["servicemonitors"]
+  to = module.prometheus_operator_crds.kubernetes_manifest.crd["servicemonitors"]
   id = "apiVersion=apiextensions.k8s.io/v1,kind=CustomResourceDefinition,name=servicemonitors.monitoring.coreos.com"
 }
 
 import {
-  to = module.crds.kubernetes_manifest.crd["thanosrulers"]
+  to = module.prometheus_operator_crds.kubernetes_manifest.crd["thanosrulers"]
   id = "apiVersion=apiextensions.k8s.io/v1,kind=CustomResourceDefinition,name=thanosrulers.monitoring.coreos.com"
 }
 
 # Version >= v0.41.0
 import {
-  to = module.crds.kubernetes_manifest.crd["probes"]
+  to = module.prometheus_operator_crds.kubernetes_manifest.crd["probes"]
   id = "apiVersion=apiextensions.k8s.io/v1,kind=CustomResourceDefinition,name=probes.monitoring.coreos.com"
 }
 
 # Version >= v0.43.0
 import {
-  to = module.crds.kubernetes_manifest.crd["alertmanagerconfigs"]
+  to = module.prometheus_operator_crds.kubernetes_manifest.crd["alertmanagerconfigs"]
   id = "apiVersion=apiextensions.k8s.io/v1,kind=CustomResourceDefinition,name=alertmanagerconfigs.monitoring.coreos.com"
 }
 
 # Version >= v0.64.0
 import {
-  to = module.crds.kubernetes_manifest.crd["prometheusagents"]
+  to = module.prometheus_operator_crds.kubernetes_manifest.crd["prometheusagents"]
   id = "apiVersion=apiextensions.k8s.io/v1,kind=CustomResourceDefinition,name=prometheusagents.monitoring.coreos.com"
 }
 
 # Version >= v0.65.0
 import {
-  to = module.crds.kubernetes_manifest.crd["scrapeconfigs"]
+  to = module.prometheus_operator_crds.kubernetes_manifest.crd["scrapeconfigs"]
   id = "apiVersion=apiextensions.k8s.io/v1,kind=CustomResourceDefinition,name=scrapeconfigs.monitoring.coreos.com"
 }
 ```
