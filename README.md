@@ -7,7 +7,7 @@ Terraform module which creates [Prometheus Operator](https://github.com/promethe
 module "prometheus_operator_crds" {
   source  = "serhii-riabov/prometheus-operator-crds/kubernetes"
 
-  crds_version = "0.71.2"
+  crds_version = "0.73.2"
 }
 ```
 
@@ -17,7 +17,7 @@ module "prometheus_operator_crds" {
   source  = "serhii-riabov/prometheus-operator-crds/kubernetes"
 
   # Version of CRDs to deploy
-  crds_version = "0.71.2"
+  crds_version = "0.73.2"
 
   # Alternative URL to get source manifests from.
   # %s, %s, %s will be replaced with CRDs version, variant, and CRD name respectively.
